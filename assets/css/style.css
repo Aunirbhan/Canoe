@@ -1,0 +1,405 @@
+/* ==============================================
+   NYU CONCRETE CANOE - GLOBAL STYLESHEET
+   Author: Aunirbhan Das
+   Theme: NYU Purple (#57068C)
+   ============================================== */
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Open Sans', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #e1e0e1;
+  color: #2a2a2a;
+}
+
+*{
+  
+}
+
+/* -------- Navigation  Bar -------- */
+.navbar {
+  background: linear-gradient(
+    to right,
+    #7104b9f2 0%,
+    #3c095f99 50%,
+    #31035099 65%
+  );
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.05rem;
+  opacity: 1; /* start visible */
+  transition: background 0.4s ease, box-shadow 0.4s ease, opacity 0.6s ease;
+  z-index: 1000;
+}
+
+/* Fade + color shift when scrolled */
+.navbar.scrolled {
+  opacity: 0.6; /* fade slightly */
+  background: linear-gradient(
+    to right,
+    rgba(87, 6, 140, 0.9),
+    rgba(124, 76, 191, 0.5),
+    rgba(87, 6, 140, 0)
+  );
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Mouse hover for a glow */
+.navbar:hover {
+  opacity: 1 !important; /* bring back full opacity */
+  box-shadow: 0 0 25px rgba(124, 76, 191, 0.5); /* soft purple glow */
+  transition: box-shadow 0.5s ease, opacity 0.4s ease;
+}
+
+/* Navbar links */
+.navbar-brand, .nav-link {
+  color: #fff !important;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.navbar-brand:hover {
+  color: #d1b3ff !important;
+}
+
+.navbar.scrolled .nav-link {
+  color: #e9ddf9 !important;
+}
+
+/* Prevent text from blurring on backdrop-filter */
+.navbar * {
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+/* -------- Dropdown Menu -------- */
+.dropdown-menu-dark {
+  background: rgba(30, 10, 50, 0.95); /* Deep purple-black glass look */
+  border: 1px solid rgba(183, 145, 240, 0.2);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 6px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+.dropdown-item {
+  color: #ffffff !important;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-item:hover {
+  background: linear-gradient(
+    to right,
+    rgba(87, 6, 140, 0.9),
+    rgba(124, 76, 191, 0.7)
+  );
+  color: #fff !important;
+}
+
+.dropdown-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Optional subtle glow on hover */
+.dropdown-menu-dark:hover {
+  box-shadow: 0 0 25px rgba(124, 76, 191, 0.5);
+}
+
+
+/* -------- Home Page -------- */
+#hero {
+  position: relative;
+  background: url('canoe.png') center 20%/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items:first baseline;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+#hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.45);
+  /* z-index: 1; */
+}
+
+/* .hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 10.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+} */
+
+.hero_text{
+  color: #5c4a78;
+  font-weight: 700;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+/* -------- Buttons -------- */
+.btn-primary {
+  background-color: #57068C;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #7c4cbf;
+  transform: scale(1.03);
+}
+
+/* -------- Sponsor Cards -------- */
+.card {
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  max-height: 150px;
+  object-fit: contain;
+}
+
+/* -------- Forms -------- */
+form .form-control {
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+  font-size: 1rem;
+}
+
+form .form-control:focus {
+  border-color: #57068C;
+  box-shadow: 0 0 0 0.25rem rgba(87, 6, 140, 0.25);
+}
+
+form label {
+  color: #57068C;
+}
+
+/* -------- Section Headings -------- */
+h1, h2, h3, h4, h5 {
+  color: #57068C;
+}
+
+/* -------- Social Icons -------- */
+.social-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-menu a {
+  color: #ffffff;
+  font-size: 1.8rem;
+  transition: color 0.3s ease;
+}
+
+.social-menu a:hover {
+  color: #b89ddf;
+}
+
+/* Dark icons for light backgrounds */
+a.text-dark:hover {
+  color: #57068C !important;
+}
+
+/* -------- Footer -------- */
+footer {
+  background-color: #2a2a2a;
+  color: #ffffff;
+}
+
+footer p {
+  margin: 0;
+}
+
+footer small {
+  display: block;
+  color: #cccccc;
+}
+
+/* -------- Utility Classes -------- */
+.section-padding {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.shadow-light {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* -------- Responsive Adjustments -------- */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .card img {
+    max-height: 120px;
+  }
+}
+
+
+/* ----------- HOME PARALLAX ---------- */
+.parallax-hero {
+  background-image: url('canoe.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 80%; 
+  background-attachment: scroll;
+  position: relative;
+  z-index: 1;
+  transition: background-position 0.1s ease-out;
+}
+
+.parallax-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: url('canoe.png');
+  z-index: 2;
+}
+.parallax-hero .container {
+  position: relative;
+  z-index: 3;
+}
+
+/* ----- TIMELINE TRANSITION ----- */
+.timeline-parallax {
+  position: relative;
+  background-color: #fff; /* the timeline background */
+  z-index: 5;
+  margin-top: -10vh; /* overlap hero slightly for smoother transition */
+  scroll-snap-type: y mandatory;
+}
+
+
+.layout {
+  display: flex;
+}
+.canoe-timeline {
+  scroll-behavior: smooth;
+  overflow: scroll;
+  height: 100vh;
+  height: 100dvh;
+  flex-grow: 1;
+  scroll-snap-type: y mandatory;
+}
+.canoe-content {
+  max-width: 36ch;
+  margin: var(--space-md);
+}
+.canoe-year {
+  scroll-snap-align: center;
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.canoe-year .canoe-icon {
+  font-weight: 800;
+  opacity: 0.05;
+  position: absolute;
+  line-height: 1;
+  font-size: 30em;
+  top: calc(50% - 0.6em);
+  left: -0.2em;
+}
+.timeline-sidebar {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-left: var(--border-width) solid var(--color-background-muted);
+}
+.scroll-link-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.scroll-link {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  align-items: center;
+  position: relative;
+  height: 2.5rem;
+  padding: 0.75rem;
+}
+.scroll-link::before {
+  content: "";
+  position: absolute;
+  height: 0;
+  left: calc(-1 * var(--border-width));
+  background: var(--color-accent);
+  width: var(--border-width);
+  transition: height 150ms;
+}
+.scroll-link[data-selected="true"]::before {
+  height: 100%;
+}
+.scroll-link .title {
+  width: 0;
+  overflow: hidden;
+}
+.scroll-link .canoe-icon {
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1;
+  height: 1em;
+  width: 1em;
+  border-radius: 0.75rem;
+  flex-shrink: 0;
+  transition: background 150ms;
+}
+@media (min-width: 540px) {
+  .layout {
+    flex-direction: row-reverse;
+  }
+  .timeline-sidebar {
+    margin-left: var(--space-lg);
+    border-left: none;
+    border-right: var(--border-width) solid var(--color-background-muted);
+  }
+  .scroll-link::before {
+    left: unset;
+    right: calc(-1 * var(--border-width));
+  }
+  .scroll-link .title {
+    width: auto;
+  }
+}
