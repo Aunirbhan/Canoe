@@ -29,44 +29,37 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <!-- Brand -->
             <a class="navbar-brand fw-bold" href="index.html">NYU Concrete Canoe</a>
 
-            <!-- Mobile Toggle -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Navbar Links -->
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
 
-                    <!-- Home -->
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
 
-                    <!-- About Us (Dropdown) -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="about.html" id="aboutDropdown"
+                        <a class="nav-link dropdown-toggle active" href="about.html" id="aboutDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false"
                             onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">
                             About Us
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="aboutDropdown">
-                            <li><a class="dropdown-item" href="subteams.html">Subteams</a></li>
-                            <li><a class="dropdown-item" href="leadership.html">Leadership</a></li>
-                            <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                            <li><a class="dropdown-item" href="about.html#subteams">Subteams</a></li>
+                            <li><a class="dropdown-item" href="about.html#leadership">Leadership</a></li>
+                            <li><a class="dropdown-item" href="about.html#faq">FAQ</a></li>
                         </ul>
                     </li>
 
-                    <!-- Sponsors -->
                     <li class="nav-item">
                         <a class="nav-link" href="sponsors.html">Sponsors</a>
                     </li>
 
-                    <!-- Contact -->
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
@@ -87,7 +80,7 @@
         <!-- Donate Button -->
         <div class="mb-5">
             <a href="assets/files/sponsorship.pdf.zip" target="_blank" class="btn btn-lg btn-primary px-5 py-3">
-                <i class="fa fa-heart me-2"></i>Donate to Support
+                <i class="fa fa-heart me-2"></i>Our Sponsorship Package
             </a>
         </div>
 
@@ -95,21 +88,46 @@
 
         <!-- Sponsor Logos Section -->
         <section>
-            <h2 class="fw-semibold mb-4">Our Sponsors</h2>
+            <h2 class="fw-semibold mb-4 text-center">Our Sponsors</h2>
+            <p class="lead text-center text-muted mb-5">
+                We are grateful for the support of our industry partners who make our work possible.
+            </p>
             <div class="row justify-content-center g-4">
-                <!-- Sponsor Logo 1 -->
-                <div class="col-10 col-md-6 col-lg-5">
-                    <div class="card border-0 shadow-sm p-4">
-                        <img src="assets/img/sponsor1.png" class="img-fluid mx-auto d-block" alt="Sponsor 1 Logo">
+
+                <div class="col-10 col-md-6 col-lg-3">
+                    <div class="flip-card mx-auto">
+                        <div class="flip-card-inner">
+
+                            <div class="card-front">
+                                <img src="assets/img/tmsLogo.png" alt="TMS Logo">
+                            </div>
+
+                            <div class="card-back bg-dark">
+                                <h4 class="fw-bold mb-3">TMS</h4>
+                                <p class="lead text-warning fw-bold">Platinum Sponsor</p>
+                                <p class="small">($5,000+ Commitment)</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Sponsor Logo 2 -->
-                <div class="col-10 col-md-6 col-lg-5">
-                    <div class="card border-0 shadow-sm p-4">
-                        <img src="assets/img/sponsor2.png" class="img-fluid mx-auto d-block" alt="Sponsor 2 Logo">
+                <div class="col-10 col-md-6 col-lg-3">
+                    <div class="flip-card mx-auto">
+                        <div class="flip-card-inner">
+
+                            <div class="card-front">
+                                <img src="assets/img/CarbicreteLogo_2019.webp" alt="Carbicrete Logo">
+                            </div>
+
+                            <div class="card-back bg-dark">
+                                <h4 class="fw-bold mb-3">Carbicrete</h4>
+                                <p class="lead text-info fw-bold">Gold Sponsor</p>
+                                <p class="small">($2,000+ Commitment)</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </section>
     </main>

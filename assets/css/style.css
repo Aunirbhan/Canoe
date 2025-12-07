@@ -403,3 +403,114 @@ footer small {
     width: auto;
   }
 }
+
+/* --- Flip Card Styles for Sponsors --- */
+
+.flip-card {
+    /* Define the size and perspective for the flip effect */
+    width: 100%; /* Will take the width of the col-lg-5 container */
+    height: 250px; /* Adjust height as needed for your content */
+    perspective: 1000px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Replace the default card shadow */
+    border-radius: 0.5rem;
+    overflow: hidden; /* Ensures content stays within the rounded corners */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+/* Hover effect */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hides the back side when rotated away */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.card-front {
+    background: white;
+    /* Optional: Add a light border */
+    border: 1px solid #e5e7eb; 
+}
+
+.card-back {
+    /* Use a primary color from your site for the back */
+    background: var(--bs-dark); /* Using dark background for contrast, adjust as needed */
+    color: white;
+    transform: rotateY(180deg); /* Initial rotation to hide the back */
+    text-align: center;
+}
+
+/* Ensure images scale correctly within the front face */
+.card-front img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+}
+
+/* --- Leadership Card Styles --- */
+
+/* 1. Remove any padding/margin that creates whitespace */
+.leadership-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Prevents any overflow */
+}
+
+.leadership-card .card-img-top {
+    margin: 0;
+    padding: 0;
+    border-radius: 0; /* Remove any border radius that might cause gaps */
+}
+
+/* 2. Image container - fixed height, no gaps */
+.square-img-container {
+    width: 100%;
+    height: 350px; /* Adjust as needed */
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    line-height: 0; /* Removes inline element spacing */
+}
+
+/* 3. Image fills container completely */
+.leader-headshot {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+/* 4. Card body styling */
+.leadership-card .card-body {
+    margin: 0;
+    padding: 1rem;
+}
+
+/* 5. Hover effect */
+.leadership-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3) !important;
+}
+
+.shadow-lg {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}

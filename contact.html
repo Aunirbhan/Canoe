@@ -30,44 +30,37 @@
     <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
-            <!-- Brand -->
             <a class="navbar-brand fw-bold" href="index.html">NYU Concrete Canoe</a>
 
-            <!-- Mobile Toggle -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Navbar Links -->
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
 
-                    <!-- Home -->
                     <li class="nav-item">
-                        <a class="nav-link active" href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
 
-                    <!-- About Us (Dropdown) -->
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="about.html" id="aboutDropdown"
+                        <a class="nav-link dropdown-toggle active" href="about.html" id="aboutDropdown"
                             data-bs-toggle="dropdown" aria-expanded="false"
                             onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();this.click();}">
                             About Us
                         </a>
                         <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="aboutDropdown">
-                            <li><a class="dropdown-item" href="subteams.html">Subteams</a></li>
-                            <li><a class="dropdown-item" href="leadership.html">Leadership</a></li>
-                            <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                            <li><a class="dropdown-item" href="about.html#subteams">Subteams</a></li>
+                            <li><a class="dropdown-item" href="about.html#leadership">Leadership</a></li>
+                            <li><a class="dropdown-item" href="about.html#faq">FAQ</a></li>
                         </ul>
                     </li>
 
-                    <!-- Sponsors -->
                     <li class="nav-item">
                         <a class="nav-link" href="sponsors.html">Sponsors</a>
                     </li>
 
-                    <!-- Contact -->
                     <li class="nav-item">
                         <a class="nav-link" href="contact.html">Contact</a>
                     </li>
@@ -85,7 +78,7 @@
                 connect with us directly.</p>
         </div>
 
-        <!-- Contact Form -->
+        <!-- Contact Form (NEED TO SET UP FORMSPREE ACCT)-->
         <form action="https://formspree.io/f/yourFormID" method="POST" class="bg-white p-5 shadow-sm rounded">
             <input type="hidden" name="_subject" value="New message from NYU Concrete Canoe website">
 
